@@ -8,6 +8,8 @@ RUN yum -y --nodocs update && \
 
 ADD index.html.tar /var/www/html/
 
+VOLUME /var/www/html/
+
 EXPOSE 80
 
 ENTRYPOINT ["httpd", "-D", "FOREGROUND"]
